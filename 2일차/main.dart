@@ -51,4 +51,17 @@ void main() {
   } else {
     print("no case2");
   }
+
+  //assert 조건문 (**사용은 매우 드물다.)
+  //조건이 true면 다음 코드 실행
+  //조건이 false면 바로 실행중단
+  assert(e == "banana");
+  print("assert is true");
+
+  //for문
+  var count = 0;
+  var number = 0;
+  for (number = 0; number < 3; number++) {
+    print("hello");
+  }
 }
