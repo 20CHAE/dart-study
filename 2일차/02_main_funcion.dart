@@ -37,3 +37,5 @@ void creatPlayer({required String name, int level = 1, double exp = 0.00}) {
 void main() {
   creatPlayer(name: 'LEE', level: 2, exp: 0.00);
 }
+
+//사칙연산 함수 만들기 해보자
