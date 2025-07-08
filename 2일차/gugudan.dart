@@ -7,6 +7,7 @@ void main() {
   for (number = 1; number < 10; number++) {
     print("$dan X $number = ${dan * number}");
   }
+  // 추가
 
   //구구단 9단계 만들기
   for (dan = 1; dan < 10; dan++) {
