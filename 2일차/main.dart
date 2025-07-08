@@ -59,9 +59,49 @@ void main() {
   print("assert is true");
 
   //for문
-  var count = 0;
   var number = 0;
   for (number = 0; number < 3; number++) {
     print("hello");
   }
+
+  //for문으로 구구단 만들기
+  //gugudan.dart파일 참조
+
+  //while문
+  //무한루프에 유의한다.
+  int count1 = 0;
+
+  while (count1 <= 5) {
+    print(count1);
+    count1++;
+  }
+
+  //do ~ while문
+  //일단 실행하고 while조건이 맞을때까지 반복
+
+  int i2 = 1;
+  int count2 = 1;
+
+  do {
+    print(i2);
+    count2++;
+  } while (count2 < 5);
+
+  //continue와 break
+  //교재 p.99
+  int i3 = 0;
+  for (i3; i3 < 10; i3++) {
+    print("i3 is $i3");
+
+    if (i3 > 4) {
+      print("is is bigger than $i3");
+      break;
+    } else if (i3 < 4) {
+      print("i3 is less than $i3");
+      continue; //왼쪽 continue는 삭제해도 무관하다.
+    }
+  }
+
+  //p101 연습문제 2-4
+  //gugudan.dart 참조
 }
