@@ -78,6 +78,7 @@ void main() {
 
   //do ~ while문
   //일단 실행하고 while조건이 맞을때까지 반복
+  //잘쓰지 않는다
 
   int i2 = 1;
   int count2 = 1;
@@ -94,10 +95,10 @@ void main() {
     print("i3 is $i3");
 
     if (i3 > 4) {
-      print("is is bigger than $i3");
+      print("$i3 is bigger than 4");
       break;
     } else if (i3 < 4) {
-      print("i3 is less than $i3");
+      print("$i3 is less than 4");
       continue; //왼쪽 continue는 삭제해도 무관하다.
     }
   }
