@@ -32,6 +32,10 @@ void main() {
   print("Map replace");
   fruit["A003"] = "Orange"; //원래있던A003키의 밸류값을 변경함
 
-  // 이어서 해줘~~~~~
+  // .containsKey()메서드
+  // .containsValue()메서드
+  // .remove()메서드
+  // .clear()메서드
+
   // ~~연습문제까지
 }
