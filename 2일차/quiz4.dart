@@ -11,10 +11,31 @@
 //없다면 숫자 출력한다
 
 void main() {
-  //변수 선언
-  int num = 1;
-
-  for (num; num <= 40; num++) {
+  //for문
+  for (int num = 1; num <= 40; num++) {
     //스트링으로 변환
+    String k = num.toString();
+    // 출력확인하기
+    // print("$k ${k.contains('3')}");
+    // 문자3이 들어있으면 짝을 출력
+    if (k.contains('3')) {
+      print("짝");
+    } else {
+      print(num);
+    }
+  }
+
+  //while문
+  int i = 1;
+  while (i <= 40) {
+    //스트링으로 변환
+    String k = i.toString();
+    if (k.contains('3')) {
+      print("짝");
+    } else {
+      print(i);
+    }
+
+    i++;
   }
 }

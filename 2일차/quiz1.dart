@@ -7,15 +7,16 @@ void main() {
   // 점수 = score, 등급 = grade
 
   int score = 70;
-  String grade = "A";
+  String grade = ""; //비워두는 것이 더 좋을 듯
 
-  if (score <= 91 && score < 101) {
+  if (score >= 91 && score < 101) {
+    // 101부터는 지정을 안해서 오류생길 수 있음
     grade = "A";
-  } else if (81 <= score) {
+  } else if (81 <= score && score < 91) {
     grade = "B";
-  } else if (71 <= score) {
+  } else if (71 <= score && score < 81) {
     grade = "C";
-  } else if (61 <= score) {
+  } else if (61 <= score && score < 71) {
     grade = "D";
   } else {
     grade = "F";

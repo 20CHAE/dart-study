@@ -1,6 +1,6 @@
 // 2.키176 몸무게63인 영재의 bmi지수 구하기
 // 저체중 ~18.4 정상 18.5~22.9 과체중 23.0~24.9 비만 25.0~
-// bmi함수작성 : 체중/키(m)*키(m)
+// bmi함수작성 : 체중/ (키(m)*키(m))
 
 //변수 정의
 double height = 1.76;
@@ -8,6 +8,7 @@ double weight = 63;
 String status = "";
 
 //함수만들기
+// main 함수 밖에 설정하는것이 효율적이다, 안에 쓰면 매번 호출해야함
 double bmi(double height, double weight) {
   double myBmi = weight / (height * height);
   return myBmi;
