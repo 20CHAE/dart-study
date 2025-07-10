@@ -2,13 +2,13 @@
 
 class Integer {
   //인스턴스변수 선언
-  late int _value;
+  late num _value;
   //생성자
-  Integer(int givenValue) {
+  Integer(num givenValue) {
     _value = givenValue;
   }
   //get함수
-  int get() {
+  num get() {
     return _value;
   }
 
@@ -27,10 +27,11 @@ class Integer {
     return Integer(_value * givenValue.get());
   }
 
-  //(4)나누기 더블 어떻게 해???????
-  // Integer operator /(Integer givenValue) {
-  //   return Integer(_value / givenValue.get());
-  // }
+  //(4)나누기 더블 !!!
+  // double이라서 위에서 받을 때 double과 int를 같이 쓸 수 있는 num으로 받아야함!
+  Integer operator /(Integer givenValue) {
+    return Integer(_value / givenValue.get());
+  }
 }
 
 void main() {
