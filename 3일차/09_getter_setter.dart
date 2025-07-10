@@ -15,8 +15,6 @@ class Integer {
   set changeNumber(int givenValue) => _value = givenValue;
 }
 
-class TimemachineInteger extends Integer {}
-
 void main() {
   var int1 = Integer();
   var int2 = Integer(3);
