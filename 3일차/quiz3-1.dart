@@ -8,4 +8,13 @@ void main() {
     list.add(num);
   }
   print(list);
+
+  // 1부터 100까지 다했을 때
+  List list2 = [];
+  for (int i = 1; i <= 100; i++) {
+    if (i % 2 == 0) {
+      list2.add(i);
+    }
+  }
+  print(list2);
 }

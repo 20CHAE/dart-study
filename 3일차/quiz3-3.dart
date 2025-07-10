@@ -9,33 +9,63 @@ class Player {
   late int age;
 
   //생성자
-  Player(givenName, givenAge) {
+  //나이만 대괄호를 써서 선택사항으로 만들었음
+  //대괄호 없으면 모두 필수사항임
+  Player(String givenName, [int givenAge = 0]) {
     name = givenName;
     age = givenAge;
   }
 
+  //get 메서드 작성
+  String returnName() {
+    return name;
+  }
+
+  int returnAge() {
+    return age;
+  }
+
+  //set 메서드 작성
+  void setName(String givenName) {
+    name = givenName;
+  }
+
+  void setAge(int givenAge) {
+    age = givenAge;
+  }
+
   //getter함수 작성
-  String get getName => "$name";
-  int get getAge => age;
+  String get getterName => name;
+  int get getterAge => age;
 
   //setter함수 작성
-  set setName(String givenName) => name = givenName;
-  set setAge(int givenAge) => age = givenAge;
+  set setterName(String givenName) => name = givenName;
+  set setterAge(int givenAge) => age = givenAge;
 }
 
 void main() {
   //함수 실행
-  dynamic n = Player("KKK", 1);
+  var n = Player("KKK", 1);
   // print(n.name); 출력확인
   // print(n.age);
 
+  //get
+  print("get으로 리턴 ${n.returnName()}");
+  print("get으로 리턴 ${n.returnAge()}");
+
+  //set
+  n.setName("JJJ");
+  print(n.returnName());
+  n.setAge(10);
+  print(n.returnAge());
+
   //getter
-  print(n.getName);
-  print(n.getAge);
+  print(n.getterName);
+  print(n.getterAge);
 
   //setter
-  n.setName = "PPP";
-  print(n.getName);
-  n.setAge = 5;
-  print(n.getAge);
+  n.setterName = "PPP";
+  print(n.getterName);
+  n.setterAge = 5;
+  print(n.getterAge);
 }
