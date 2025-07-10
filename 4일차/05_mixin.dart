@@ -60,7 +60,8 @@ class newInteger extends Integer with ActivationFlag {
 
 // mixin ----------------------------------
 //일부클래스에만 사용하고 싶다면 아래처럼 씀
-//mixin ActivationFlag on newInteger {
+// 상위클래스에 on 해줬음
+//mixin ActivationFlag on Integer {
 mixin ActivationFlag {
   bool _flag = true;
 
