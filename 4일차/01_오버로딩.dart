@@ -1,4 +1,4 @@
-//p196 오버로딩
+//p196 오버로딩 (OVERLOADING 과적하다 무리하게 짐을 싣다)
 
 class Integer {
   late int _value;

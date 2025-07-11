@@ -1,7 +1,5 @@
 // p203
-//
 
-//01에서 만든 클래스
 class Integer {
   late int _value;
 
@@ -40,12 +38,8 @@ class newInteger extends Integer {
   //오버라이드
   //Integer클래스에 있던 코드에서 이 기능들을 추가해줘
   @override
-  // 원래있던 set함수에 기능 추가해줘
   void set(int givenValue) {
-    //기존값인 _value를 리스트에 넣어줘
     _list.add(_value);
-    //super : 클래스 생성시 extends뒤에 쓴 클래스를 말함. (새로만든 클래스)
-    //값받아서 Integer클래스의 set함수 실행할게
     super.set(givenValue);
   }
 

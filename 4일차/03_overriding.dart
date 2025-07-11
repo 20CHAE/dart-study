@@ -1,4 +1,4 @@
-//p200 오버라이드
+//p200 오버라이드 (OVERRIDE 우선하다)
 // 있는 기능에 추가해서 사용
 
 //01에서 만든 클래스
@@ -40,7 +40,7 @@ class newInteger extends Integer {
   void set(int givenValue) {
     //기존값인 _value를 리스트에 넣어줘
     _list.add(_value);
-    //super : 클래스 생성시 extends뒤에 쓴 클래스를 말함. (새로만든 클래스)
+    //super : 클래스 생성시 extends뒤에 쓴 클래스를 말함. (기존 클래스)
     //값받아서 Integer클래스의 set함수 실행할게
     super.set(givenValue);
   }

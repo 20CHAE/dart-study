@@ -9,6 +9,13 @@ class Human {
   late String name;
   late int age;
   late String gender;
+
+  // // 그냥 생성자 줄여서 쓴다면
+  // Human(String givenName, int givenAge, String givenGender)
+  //   : name = givenName,
+  //     age = givenAge,
+  //     gender = givenGender;
+
   // named paramter 를 이용할 때, 기본 값을 주고 싶지 않다면 -> 이 값이 필수적으로 입력될 것이다 라고 컴퓨터에게 인지를 시켜줘야 함.
   // required 자료형 변수명 이 구조로 사용을 하게 되시면 기본값을 안줘도 필수로 들어갈거다.
   Human({
@@ -27,10 +34,14 @@ class Human {
 }
 
 void main() {
-  // named parameter 를 사용하게 될 경우, 기존 일반적인 방법으로 선언을 하는게 아니라,
+  //일반 생성자 생성시 불러오는 방법
+  //값을 적을 때 순서와 자료형을 지켜야한다.
+  //  var asdf = Human("kkk", 5, "여성");
+
+  // named parameter 사용할 경우 : 기존 방법으로 선언x
   // (변수명: 값, 변수명: 값, 변수명: 값)
-  // named parameter 를 사용하지 않으면 각 변수의 위치에 맞는 값들을 넣어줘야 하지만,
-  // named parameter 를 사용하게 될 경우, map처럼 순서 무관
+  // 일반 생성자를 썼다면 각 변수의 위치에 값을 넣는다.
+  // named parameter는 map처럼 순서 무관
   var human = Human(givenName: "김철수", givenAge: 16, givenGender: "남성");
   // print(human.name);
   // print(human.age);

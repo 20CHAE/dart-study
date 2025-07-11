@@ -4,7 +4,7 @@
 // [보트가 물 위를 떠다닙니다.] [자동차가 도로를 달려다닙니다.]
 
 abstract class Vehicle {
-  void drive() {}
+  void drive();
 }
 
 class Boat implements Vehicle {
@@ -16,7 +16,7 @@ class Boat implements Vehicle {
 
 class Car implements Vehicle {
   @override
-  void drive() {
+  drive() {
     print("자동차가 도로를 달려다닙니다.");
   }
 }
