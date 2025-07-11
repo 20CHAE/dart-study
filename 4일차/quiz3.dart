@@ -16,7 +16,7 @@ class Boat implements Vehicle {
 
 class Car implements Vehicle {
   @override
-  drive() {
+  void drive() {
     print("자동차가 도로를 달려다닙니다.");
   }
 }
