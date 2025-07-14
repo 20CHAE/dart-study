@@ -2,7 +2,7 @@
 // 비어있는 부분을 작성해 코드를 완성하세요.
 
 class Shop<T> {
-  late dynamic item;
+  late T item;
   Shop(T givenItem) : item = givenItem;
 
   T get() {

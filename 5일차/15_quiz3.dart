@@ -5,17 +5,26 @@
 // [해당 값은 문자열이 아닙니다.]
 
 // 12.dart참고하여 작성해봐~~~~
-//가상클래스 데려와서 tostring이라는 메서드 오버라이딩해서 사용함
-class NoStringException {}
+// 해결방법 : 다트가 제공해주는 가상클래스Exception 데려와서
+// tostring이라는 메서드 오버라이딩해서 사용함
+class NoStringException implements Exception {
+  // 오버라이드해서 toString가져오기
+  @override
+  String toString() {
+    // TODO: implement toString
+    return "해당 값은 문자열이 아닙니다.";
+  }
+}
 
 void main() {
   var num = 10;
+
   try {
-    // 클래스에게 에러확인 토스해주기
     if (num.runtimeType != String) {
-      print("해당 값은 문자열이 아닙니다.");
+      // NoStringException 로 에러 토스
+      throw NoStringException();
     }
   } catch (error) {
-    //에러라면 프린트해줘
+    print(error);
   }
 }
