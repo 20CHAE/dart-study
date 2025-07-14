@@ -13,7 +13,8 @@ void main() {
   // 입력 이라는 글자를 출력해줘
   stdout.write("입력");
   // 사용자의 입력값을 userInput에 담아줘
-  var userInput = stdin.readLineSync(encoding: utf8);
+  //encoding: utf8 : 한글 인코딩임
+  var userInput = stdin.readLineSync(encoding: utf8); //string 타입으로 받게 된다.
   // 아래 문구를 출력해줘
   stdout.writeln("당신은 이것을 입력했습니다. : $userInput");
 

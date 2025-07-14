@@ -1,4 +1,5 @@
 // p.290
+//값을 두번 받아서 더한값 출력
 
 import 'dart:io';
 
@@ -14,7 +15,7 @@ void main() {
   // null이 될일 없고 언제나 값을 입력할거라는 뜻으로 느낌표를 붙임.
   iList.add(int.parse(input!));
   stdout.write("두번째 숫자 입력 : ");
-  input = stdin.readLineSync();
+  input = stdin.readLineSync(); //string으로 받게됨
   // A ?? B  : A가 참이면 A사용 거짓이면 B사용
   // input ?? '1' : input에 값이 있으면 그걸 사용하고, 없으면 '1'을 써라
   // 근데 교재 코드는 오류나서 아래처럼 수정하였다.
