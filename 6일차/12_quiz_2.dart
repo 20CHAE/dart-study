@@ -9,13 +9,15 @@ import 'dart:io';
 
 void main() {
   var files = {
-    "file1": "file1 파일 내용입니다.",
+    "file1": "file1 파일 내용입니다.rr",
     "file2": "file2 파일 내용입니다.",
     "file3": "file3 파일 내용입니다.",
   };
 
   // 하나씩 가져와서 키값 밸류값 꺼내고
   for (var i in files.keys) {
+    //출력값 확인
+    // print(files.keys);
     // 파일명 지정하고
     var filename = File('6일차/quiz/$i.txt').openWrite();
     // 내용 넣기
