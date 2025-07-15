@@ -52,7 +52,7 @@ void main() async {
   //   print(error);
   // }
 
-  // p302~ 파일에 데이터 저장하기------------------------------
+  // p302~ txt파일에 데이터 저장하기------------------------------
 
   List<String> fileContent = await readFileToList('6일차/09_src.txt');
 
@@ -61,6 +61,7 @@ void main() async {
   var iVar2 = 0;
   var count = 0;
 
+  //새로 데이터 저장하기 위해 openWrite로 쓰기위해 열어줌
   var dstSink = File('6일차/dst.txt').openWrite();
 
   dstSink.write(':=> File ACCESSED ${DateTime.now()}\n');
