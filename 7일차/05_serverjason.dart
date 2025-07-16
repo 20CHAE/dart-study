@@ -6,6 +6,8 @@ import 'dart:convert';
 Future main() async {
   var server = await HttpServer.bind(InternetAddress.loopbackIPv4, 3000);
   printHttpServerActivated(server);
+
+  // 요청 처리하기
   await for (HttpRequest request in server) {
     printHttpRequestInfo(request);
     try {

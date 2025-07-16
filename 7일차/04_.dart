@@ -1,9 +1,9 @@
 // p359
 // http에서 가장많이 쓰는 메서드 4가지
-// 1. get : 클라이언트가 서버에게 어떤것을 읽겠다고 요청
-// 2. post : 서버에게 어떤것을 쓰겠다(생성하겠다)고 요청
-// 3. put : 서버에게 어떤것을 쓰겠다(수정하겠다)고 요청
-// 4. delete : 서버에게 어떤 것을 삭제하겠다고 요청
+// 1. get : 클라이언트가 서버에게 읽겠다고 요청
+// 2. post : 서버에게 생성요청
+// 3. put : 서버에게 수정요청
+// 4. delete : 서버에게 삭제요청
 
 // p366
 import 'dart:io';
@@ -123,14 +123,19 @@ void httpDeleteHandler(HttpRequest request) async {
 }
 
 Future main() async {
-  //p372
+  //p372 서버생성
   var ip = InternetAddress.loopbackIPv4;
   var port = 3000;
   var server = await HttpServer.bind(ip, port);
+  //서버가 실행되고 있는지 확인
   printHttpServerActivated(server);
+
+  //
+  // 요청 처리하기
   await for (HttpRequest request in server) {
     printHttpRequestInfo(request);
     try {
+      // switch를 써서, 메서드에 따라 다르게 동작함
       switch (request.method) {
         case 'GET':
           httpGetHandler(request);

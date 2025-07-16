@@ -12,15 +12,16 @@ void main() async {
   //입력한 ip와 port로 서버를 만듦
   var server = await HttpServer.bind(ip, port);
 
-  //
+  //주소확인
   print("\$ server activated = ${server.address.address}:${server.port}.");
 
   //p350
-  // server에 존재하는 request들에 대해 계속 반복하여 내부코드를 실행해줘
+  // server에 들어온 request가 있다면 반복하여 실행해줘
   await for (HttpRequest request in server) {
     // try {} catch (error) {}
     try {
       //request.uri.path : url에서 http://127.0.0.1:4040/ 를 제와한 다음문자열
+      // uri: 사용자가 보낸요청의 주소, path : 주소에 대한 경로(ip주소와 포트번호를 제외한 다음문자열)
       print("\$ http request for ${request.uri.path} at (${DateTime.now()}).");
 
       //p352
